@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import Layout from './components/Layout';
-import Main from './components/Main';
+import Searchresults from './components/Searchresults';
+import './css/main.css'
 
 function App() {
   return (
     <Layout>
-      <Main/>
+      <Searchresults/>
     </Layout>
   );
 }

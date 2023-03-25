@@ -6,7 +6,7 @@ export default function Layout({children}) {
                 <nav>
                     <form>
                         <input type="text" placeholder="Søk.." name="search"/>
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <button type="submit">Søk</button>
                     </form>
                 </nav>
             </header>

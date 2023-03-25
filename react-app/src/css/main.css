@@ -1,0 +1,49 @@
+div.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  justify-content: right;
+  margin-right: 1rem;
+}
+form button {
+  width: fit-content;
+}
+
+h2 {
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+article {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 2px solid black;
+}
+article .movie-card {
+  margin: 5px;
+  border: 1px solid black;
+  width: 32%;
+  flex-direction: column;
+}
+article .movie-card h3, article .movie-card a {
+  padding: 5px;
+}
+article .movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
