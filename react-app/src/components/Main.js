@@ -8,9 +8,9 @@ export default function Main(){
     const getMovies = async() => {
         const response = await fetch ('http://www.omdbapi.com/?i=tt3896198&apikey=4ffa912&s=james-bond')
         const data = await response.json()
-        setMovies(data.articles)
+        setMovies(data?.Search)
     }
-    console.log(movies?.search?.title)
+    console.log(movies)
     
     useEffect(() =>{
         getMovies()
@@ -19,7 +19,7 @@ export default function Main(){
         <>
         <h2>Her kommer filmer</h2>
             {movies?.map((movie, index) =>(
-                <Moviecard key={index} title={movie?.search?.title} img={movie?.search?.poster}/>
+                <Moviecard key={index} title={movie?.Title} img={movie?.Poster}/>
             ))}
 
         </>
