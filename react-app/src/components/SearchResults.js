@@ -14,17 +14,17 @@ export default function Searchresults(){
         const movieInfo = data?.Search
         const resultat = movieInfo?.map(items => items?.imdbID)
 
-        const realMovies = await Promise.all (resultat.map(id => (
+        const findMovieIds = await Promise.all (resultat.map(id => (
             fetch (`http://www.omdbapi.com/?apikey=4ffa912&type=movie&i=${id}`)
         )))
 
-        const realRealMovies = await Promise.all (realMovies.map(realId => (
+        const useId = await Promise.all (findMovieIds.map(realId => (
              realId.json()
         )))
 
-        setMoviesPrint(realRealMovies)
+        setMoviesPrint(useId)
 
-        console.log("getMovieInfo", realRealMovies)
+        console.log("getMovieInfo", useId)
         console.log("getmovies", data)
 
         }else{
@@ -39,13 +39,10 @@ export default function Searchresults(){
     
     return(
         <>
-        <h2>Her kommer filmer</h2>
-
-   
-        <input type="text" placeholder="Søk.." onInput={event => inputValue(event.target.value)} />
-        <button onClick={getMovies} >Søk</button>
-        
-
+        <div className="searchBox">
+            <input id="myInput" type="text" placeholder="Søk.." onInput={event => inputValue(event.target.value)} />
+            <button onClick={getMovies}  >Søk</button>
+        </div>
         <article>
             
 

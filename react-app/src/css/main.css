@@ -5,17 +5,31 @@ div.container {
 }
 
 header {
-  border: 2px solid black;
   padding: 1rem;
+  background-color: black;
+  color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
-form {
+.searchBox {
   display: flex;
-  justify-content: right;
-  margin-right: 1rem;
+  justify-content: center;
+  height: 30.9667px;
 }
-form button {
-  width: fit-content;
+.searchBox button {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+.searchBox button:hover {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+.searchBox input {
+  border: 1px solid black;
 }
 
 h2 {
@@ -30,7 +44,6 @@ article {
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
-  border: 2px solid black;
 }
 article .movie-card {
   margin: 5px;
@@ -39,11 +52,33 @@ article .movie-card {
   flex-direction: column;
 }
 article .movie-card h3, article .movie-card a {
-  padding: 5px;
+  padding-left: 5px;
 }
 article .movie-card img {
   width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  article {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  article .movie-card {
+    max-width: 230px;
+    width: 100%;
+  }
+  article .movie-card ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  article .movie-card li {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

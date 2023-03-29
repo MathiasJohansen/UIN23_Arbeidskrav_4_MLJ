@@ -7,15 +7,30 @@ div.container {
 
 }
 header{
-    border: 2px solid black;
     padding: 1rem;
-}
-form{
+    background-color: black;
+    color: white;
+    margin-bottom: 1rem;
     display: flex;
-    justify-content: right;
-    margin-right: 1rem;
+    justify-content: center;
+    
+}
+.searchBox{
+    display: flex;
+    justify-content: center;
+    height: 30.9667px;
     button{
-        width: fit-content;
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        &:hover{
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+        }
+    }
+    input{
+        border: 1px solid black;
     }
 }
 
@@ -31,7 +46,6 @@ article{
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
-    border: 2px solid black;
     
     .movie-card{
         margin: 5px;
@@ -39,12 +53,34 @@ article{
         width: 32%;
         flex-direction: column;
         h3, a{
-            padding: 5px;
+            padding-left: 5px;
             
         }
         img{
             width: 100%;
             height: auto;
         }
+        
+    }
+}
+@media only screen and (max-width: 900px) {
+    article{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;  
+        justify-content: space-around; 
+    .movie-card{
+        max-width: 230px;
+        width: 100%;
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li{
+            width: 100%;
+        }
+    }
     }
 }
